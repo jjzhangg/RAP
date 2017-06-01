@@ -24,14 +24,6 @@
     }
 </script>
 
-    <div>
-        <a href="http://click.aliyun.com/m/7690/" target="_blank">
-            <div style="text-align: center; background-color: #020539;">
-                <img src="https://img.alicdn.com/tps/TB11hX1OpXXXXcLaXXXXXXXXXXX-760-50.jpg">
-            </div>
-        </a>
-    </div>
-
     #if(!$hide)
     <div class="navbar navbar-inverse" role="navigation" style="border-radius: 0;"><!-- navbar-fixed-top -->
         <div class="container">
@@ -46,7 +38,7 @@
                 <a class="navbar-brand" href="/">
                     <i class="iconlogo mi-rap"></i>
                     <span class="logo-text">
-                        <span id="rap-logo-text">RAP</span> 
+                        <span id="rap-logo-text">RAP</span>
                         <span>v0.14.12</span>
                         <span style="color:#cc0000; font-size:10px;">&nbsp;&nbsp;beta</span></span>
                 </a>
@@ -166,15 +158,17 @@
                                                    placeholder="用户名" required name="account">
                                             <input class="span2 form-control" style="width:200px;margin-top:10px;"
                                                    type="password" required placeholder="密码" name="password">
-                                            <!-- <div style="margin-top: 10px; display: none;">
+                                            <div style="margin-top: 10px">
                                               <div class="checkbox remember-me">
                                                   <label>
-                                                    <input type="checkbox" name="remember"> 下次自动登录
+                                                    <input type="checkbox" name="remember" checked="true"> 下次自动登录
                                                   </label>
-                                                </div>http://rap.xintuzaojiu.com/org/index.do
-                                            </div> -->
+                                                </div>
+                                            </div>
+                                            <!--
                                             <input name="kaptcha" class="form-control" type="text" value="" placeholder="请输入验证码" style="width:200px;margin-top:10px;">
                                             <img src="/Kaptcha.jpg" onclick="this.src='/Kaptcha.jpg?' + Math.random()" style="margin-top: 5px;">
+                                            -->
                                             <div style="margin-top: 10px;">
                                                 <button type="submit" class="btn btn-primary" id="login-btn">登录</button>
                                                 <button type="button" class="btn btn-default" id="cancel-login-btn"
