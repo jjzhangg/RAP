@@ -1,0 +1,22 @@
+version: '2'
+services:
+  rap:
+    image: registry-ci.datayes.com/develop/rap-dev:0.0.1
+    build: rap
+    volumes:
+    - ./logs/rap:/usr/local/tomcat/logs
+    # - ../target/RAP-0.14.12-SNAPSHOT:/usr/local/tomcat/webapps/ROOT
+    ports:
+    - 9080:8080/tcp
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+    - ./rap_mysql:/var/lib/mysql
+    ports:
+    - 3311:3306/tcp
+  redis:
+    image: redis:3.2-alpine
+    ports:
+    - 6379:6379/tcp
